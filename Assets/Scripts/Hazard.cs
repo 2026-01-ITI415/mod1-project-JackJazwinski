@@ -7,8 +7,11 @@ public class Hazard : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Game Over");
-
             Time.timeScale = 0f;
+        }
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -18,6 +18,7 @@ public class Hazard : MonoBehaviour
         {
             Debug.Log("Game Over");
             Time.timeScale = 0f;
+            FindObjectOfType<GameManager>().GameOver();
         }
     }
 }
